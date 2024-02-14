@@ -7,6 +7,7 @@ use App\Http\Controllers\AboutController;
 use App\Http\Controllers\DoctorController;
 use App\Http\Controllers\NewsController;
 use App\Http\Controllers\Contact;
+use App\Http\Controllers\backend\basic\SpecialistController;
 
 /*
 |--------------------------------------------------------------------------
@@ -31,6 +32,16 @@ Route::get('/doctors',[DoctorController::class, 'index'])->name('doctor');
 Route::get('/news',[NewsController::class, 'index'])->name('news');
 // Contact
 Route::get('/contact',[Contact::class, 'index'])->name('contact');
+
+
+
+// BAsic
+
+Route::get('/admin/basic/specialist',[SpecialistController::class, 'index'])->name('specialist');
+Route::post('/admin/basic/specialistinsert',[SpecialistController::class, 'insert'])->name('specialist_insert');
+
+
+
 
 Route::middleware([
     'auth:sanctum',

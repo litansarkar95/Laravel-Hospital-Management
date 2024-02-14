@@ -61,9 +61,9 @@
         </div>
         <div class="col-sm-6 col-lg-3 py-3">
           <h5>Contact</h5>
-          <p class="footer-link mt-2">351 Willow Street Franklin, MA 02038</p>
-          <a href="#" class="footer-link">701-573-7582</a>
-          <a href="#" class="footer-link">healthcare@temporary.net</a>
+          <p class="footer-link mt-2">Tangail</p>
+          <a href="#" class="footer-link">01829107469</a>
+          <a href="#" class="footer-link">rodasiit@gmail.com</a>
 
           <h5 class="mt-3">Social Media</h5>
           <div class="footer-sosmed mt-3">
@@ -78,7 +78,7 @@
 
       <hr>
 
-      <p id="copyright">Copyright &copy; 2020 <a href="https://macodeid.com/" target="_blank">MACode ID</a>. All right
+      <p id="copyright">Copyright &copy; 2024 <a href="https://www.rodasiit.com/" target="_blank">Rodasi IT</a>. All right
         reserved</p>
     </div>
   </footer>
