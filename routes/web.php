@@ -23,7 +23,7 @@ use App\Http\Controllers\backend\basic\SpecialistController;
 
 
 Route::get('/',[HomeController::class, 'index'])->name('home');
-Route::get('/home',[HomeController::class, 'redirect']);
+Route::get('/home',[HomeController::class, 'redirect'])->name('dashboad_home');
 Route::get('/abouts',[AboutController::class, 'index'])->name('about');
 
 // doctor
@@ -39,7 +39,9 @@ Route::get('/contact',[Contact::class, 'index'])->name('contact');
 
 Route::get('/admin/basic/specialist',[SpecialistController::class, 'index'])->name('specialist');
 Route::post('/admin/basic/specialistinsert',[SpecialistController::class, 'insert'])->name('specialist_insert');
-
+Route::delete('/admin/basic/specialist/detele/{id}',[SpecialistController::class, 'delete'])->name('delete.speciallist');
+Route::get('/admin/basic/specialist/{id}/edit',[SpecialistController::class, 'edit'])->name('admin.speciallist.edit');
+Route::put('/admin/basic/specialist/update/{id}',[SpecialistController::class, 'updatespecialist'])->name('admin.update.specialist');
 
 
 

@@ -22,6 +22,9 @@
 
   <!-- iCheck -->
   <link href="{{ asset ('backend/vendors/iCheck/skins/flat/green.css') }}" rel="stylesheet">
+   <!-- sweetalert -->
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/sweetalert2@11.10.0/dist/sweetalert2.min.css">
+  
   <!-- Datatables -->
 
   <link href="{{ asset ('backend/vendors/datatables.net-bs/css/dataTables.bootstrap.min.css') }}" rel="stylesheet">

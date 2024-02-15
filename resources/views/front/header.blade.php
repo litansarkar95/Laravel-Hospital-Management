@@ -50,12 +50,23 @@
             <li class="nav-item">
               <a class="nav-link" href="{{ route('contact')}}">Contact</a>
             </li>
+            @if(Auth::id())
+
+            <form method="POST" action="{{route('logout')}}">
+                            @csrf
             <li class="nav-item">
+              <a class="btn btn-warning ml-lg-3" href="{{route('logout')}}"  onclick="event.preventDefault(); this.closest('form').submit();">Logout </a>
+            </li>
+            </form>
+  @else
+  <li class="nav-item">
               <a class="btn btn-primary ml-lg-3" href="{{ route('login')}}">Login </a>
             </li>
+
             <li class="nav-item">
               <a class="btn btn-success ml-lg-3" href="{{ route('register')}}">Register</a>
             </li>
+            @endif
           </ul>
         </div> <!-- .navbar-collapse -->
       </div> <!-- .container -->

@@ -11,19 +11,20 @@
       	<div class="col-md-5 col-sm-12 ">
 							<div class="x_panel">
 								<div class="x_title">
-									<h2>Create Specialist</h2>
+									<h2>Edit Specialist</h2>
 								
 									<div class="clearfix"></div>
 								</div>
 								<div class="x_content">
 									<br />
-									<form id="demo-form2"  action="{{route('specialist_insert') }}" method="post" class="form-horizontal form-label-left">
-                                            @csrf
+									<form id="demo-form2"  action="{{route('admin.update.specialist',$specialid->id) }}" method="post" class="form-horizontal form-label-left">
+                                    @csrf
+                                  @method('PUT')
 										<div class="item form-group">
 											<label class="col-form-label col-md-3 col-sm-3 label-align" for="name">Name<span class="required">*</span>
 											</label>
 											<div class="col-md-9 col-sm-9 ">
-												<input type="text" id="name" value="{{old('name')}}"  name="name" required="required" class="form-control ">
+												<input type="text" id="name" value="{{$specialid->name}}"  name="name" required="required" class="form-control ">
 											</div>
 										</div>
 									
@@ -32,7 +33,7 @@
 										<div class="item form-group">
 											<div class="col-md-6 col-sm-6 offset-md-3">
 												<button class="btn btn-primary" type="reset">Reset</button>
-												<button type="submit" class="btn btn-success">Submit</button>
+												<button type="submit" class="btn btn-success">Update</button>
 											</div>
 										</div>
 

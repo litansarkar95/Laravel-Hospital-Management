@@ -27,5 +27,42 @@ class SpecialistController extends Controller
         return redirect()->back();
     }
 
+    public function delete(Specialist $id) {
+        $id->delete();
+
+      toastr()->success('Item deleted successfully!', 'Congrats');
+        return redirect()->back();
+    }
+
+
+    public function edit($id){
+
+        $specialid= Specialist::findOrFail($id);
+
+        $specialist = Specialist::all();
+        return view('admin.basic.specialist-edit', compact('specialist','specialid'));
+
+    }
+
+
+    public function updatespecialist(Request $request,$id){
+
+        $specialid = Specialist::findOrFail($id);
+      
+        $validateData = $request->validate([
+            'name' => 'required',    
+        ]
+           
+        );
+       
+        $specialid->update([
+            'name'=> $validateData['name']
+        ]);
+     
+    
+        toastr()->success('Specialist is updated successfully!', 'Congrats');
+        return redirect()->route('specialist');
+
+    }
    
 }

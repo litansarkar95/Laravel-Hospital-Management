@@ -13,10 +13,10 @@ class HomeController extends Controller
 
 
     public function redirect(){
-        
+
         if(Auth::id()){
-            if(Auth::user()->usertype =='0'){
-            return view('dashboard');
+            if(Auth::user()->usertype == 0){
+            return view('front.home');
             }else{
 
              return view('admin.dashboard');
