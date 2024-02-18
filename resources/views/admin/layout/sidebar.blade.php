@@ -15,7 +15,7 @@
                 <li><a><i class="fa fa-user-md"></i> Doctors <span class="fa fa-chevron-down"></span></a>
                   <ul class="nav child_menu">
                   <li><a href="{{ route('specialist') }}">Specialist </a></li>
-          
+                  <li><a href="{{ route('admin.doctor_create') }}">Create Doctor </a></li>
                   </ul>
                 </li>
                 <li><a><i class="fa fa-calendar"></i> Appointment <span class="fa fa-chevron-down"></span></a>

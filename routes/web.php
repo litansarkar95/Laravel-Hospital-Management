@@ -8,6 +8,7 @@ use App\Http\Controllers\DoctorController;
 use App\Http\Controllers\NewsController;
 use App\Http\Controllers\Contact;
 use App\Http\Controllers\backend\basic\SpecialistController;
+use App\Http\Controllers\backend\basic\DoctorAdminController;
 
 /*
 |--------------------------------------------------------------------------
@@ -43,7 +44,9 @@ Route::delete('/admin/basic/specialist/detele/{id}',[SpecialistController::class
 Route::get('/admin/basic/specialist/{id}/edit',[SpecialistController::class, 'edit'])->name('admin.speciallist.edit');
 Route::put('/admin/basic/specialist/update/{id}',[SpecialistController::class, 'updatespecialist'])->name('admin.update.specialist');
 
-
+// Backend Doctor
+Route::get('/admin/basic/doctor',[DoctorAdminController::class, 'create'])->name('admin.doctor_create');
+Route::post('/admin/basic/doctoradmin/insert',[DoctorAdminController::class, 'insert'])->name('doctor_insert');
 
 Route::middleware([
     'auth:sanctum',
