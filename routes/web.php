@@ -25,6 +25,7 @@ use App\Http\Controllers\backend\basic\DoctorAdminController;
 
 Route::get('/',[HomeController::class, 'index'])->name('home');
 Route::get('/home',[HomeController::class, 'redirect'])->name('dashboad_home');
+Route::post('/appointment',[HomeController::class, 'appointment']);
 Route::get('/abouts',[AboutController::class, 'index'])->name('about');
 
 // doctor
@@ -57,3 +58,7 @@ Route::middleware([
         return view('dashboard');
     })->name('dashboard');
 });
+
+
+Route::get('/GetDoctorSpecialistsId/{id}',[HomeController::class, 'GetDoctorSpecialistsId']);
+

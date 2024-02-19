@@ -87,6 +87,9 @@
                             <tr>
                               <th>S.L</th>
                               <th>Name</th>
+                              <th>Depertment</th>
+                              <th>Mobile</th>
+                              <th>Picture</th>
                               <th>Create Date</th>
                               <th>Action</th>
                            
@@ -95,10 +98,13 @@
 
 
                           <tbody>
-                          @foreach($specialist as $key => $lt)
+                          @foreach($doctorcnt as $key => $lt)
                             <tr>
                               <td>{{$key +1}}</td>
                               <td>{{$lt->name}}</td>
+                              <td>{{$lt->sname}}</td>
+                              <td>{{$lt->phone_number}}</td>
+                              <td>   <img src="{{ asset('doctorimage/'.$lt->picture) }}" alt="" width="50px"></td>
                               <td>{{$lt->created_at}}</td>
                               <td>        
                   <div class="btn-group">

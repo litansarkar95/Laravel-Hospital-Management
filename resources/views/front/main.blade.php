@@ -20,6 +20,7 @@
   <link rel="stylesheet" href="assets/vendor/animate/animate.css">
 
   <link rel="stylesheet" href="assets/css/theme.css">
+  <script src="assets/js/jquery-3.5.1.min.js"></script>
 </head>
 
 <body>
@@ -83,7 +84,7 @@
     </div>
   </footer>
 
-  <script src="assets/js/jquery-3.5.1.min.js"></script>
+
 
   <script src="assets/js/bootstrap.bundle.min.js"></script>
 
